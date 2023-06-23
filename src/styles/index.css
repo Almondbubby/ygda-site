@@ -1,0 +1,149 @@
+body {
+	/* NOTE removed to avoid visual issues */
+	white-space: normal;
+
+	/* for aesthetics */
+	padding: 32px;
+}
+
+main {
+	margin: 0;
+	padding: 0;
+	margin-top: 50px;
+}
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in-section {
+	opacity: 0;
+	transform: translateY(20vh);
+	visibility: hidden;
+	transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+	will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+
+.home {
+	animation: 1s ease-out 0s 1 fadeIn;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(325px, 4fr));
+	gap: 2em;
+}
+
+.hero > * {
+	margin: 0;
+}
+
+/* color links like Notion.  Not sure why this isn't exported properly. */
+:not(.image) > a[href] {
+	text-decoration: none;
+	border-bottom: 0.05em solid;
+	border-color: rgba(55, 53, 47, 0.4);
+	opacity: 0.7;
+	transition: all 0.3s;
+}
+
+:not(.image) > a[href]:hover {
+	border-color: rgba(5, 3, 7, 0.8);
+	opacity: 1;
+}
+
+:not(.announcement-profile-pic) > a[href] {
+	text-decoration: none;
+	border-bottom: 0.05em solid;
+	border-color: rgba(55, 53, 47, 0.4);
+	opacity: 0.7;
+	transition: all 0.3s;
+}
+
+:not(.announcement-profile-pic) > a[href]:hover {
+	border-color: rgba(5, 3, 7, 0.8);
+	opacity: 1;
+}
+
+.column-text {
+	display: table-caption;
+  	caption-side: bottom;
+}
+
+.row-list {
+	display: grid;
+	grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));
+	row-gap: 4em;
+}
+
+.column-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	column-gap: 2em;
+}
+
+.link-list {
+	padding: 0;
+	margin: 0;
+}
+.link-list > li {
+	list-style-type: none;
+}
+
+/* remove padding since it's covered by column-gap */
+.column {
+	padding: 0;
+}
+
+/* space out the way they are in Notion */
+.bulleted-list {
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
+}
+
+.bulleted-list > * {
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+.topnav {
+  text-align: center;
+  overflow: hidden;
+  top: 0;
+  position: fixed;
+  width: 100%; /* Updated width to 100% */
+  background: rgba(255, 255, 255, 100%);
+}
+
+.topnav a {
+  display: inline-block; /* Added display property */
+  color: rgb(55, 53, 47, 100%);
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: rgb(55, 53, 47, 100%);
+  color: white;
+}
+

@@ -1,5 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import './styles/index.css'
+import './styles/notion.css'
+
 import Home from './components/Home';
 import Announcements from './components/Announcements';
 import Projects from './components/Projects';

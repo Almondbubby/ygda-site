@@ -2,18 +2,11 @@ import React from 'react';
 
 const TopBar = () => {
   return (
-    <div className="top-bar">
-      <div className="logo">Logo</div>
-      <div className="title">YGDA</div>
-      <div className="navigation">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/announcements">Announcements</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/calendar">Calendar</a></li>
-          <li><a href="/learn">Learn</a></li>
-        </ul>
-      </div>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="Announcements.html">Announcements</a>
+        <a href="projects.html">Projects</a>
+        <a href="Calendar.html">Calendar</a>
     </div>
   );
 };
