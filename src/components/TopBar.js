@@ -7,6 +7,7 @@ const TopBar = () => {
         <a href="Announcements.html">Announcements</a>
         <a href="projects.html">Projects</a>
         <a href="Calendar.html">Calendar</a>
+        <a href="Learn.html">Learn</a>
     </div>
   );
 };
